@@ -1,0 +1,38 @@
+service: backend-aws
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  environment:
+    AWS_REGION: ${self:provider.region}
+    TABLE_USUARIOS: Usuarios
+    TABLE_PRODUCTOS: Productos
+    TABLE_CATEGORIAS: Categorias
+    TABLE_CARRITO: Carrito
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "*"
+
+functions:
+  api:
+    handler: src/lambda.handler
+    events:
+      - httpApi:
+          path: /
+          method: ANY
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-offline
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .env
