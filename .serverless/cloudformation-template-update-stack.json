@@ -169,7 +169,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/backend-asorisa/dev/1763007098442-2025-11-13T04:11:38.442Z/backend-asorisa.zip"
+          "S3Key": "serverless/backend-asorisa/dev/1763046425272-2025-11-13T15:07:05.272Z/backend-asorisa.zip"
         },
         "Handler": "src/lambda.handler",
         "Runtime": "nodejs18.x",
@@ -182,7 +182,8 @@
             "TABLE_PRODUCTOS": "productos",
             "TABLE_CATEGORIAS": "categorias",
             "TABLE_CARRITO": "carrito",
-            "TABLE_COUNTERS": "Counters"
+            "TABLE_COUNTERS": "Counters",
+            "JWT_SECRET": "1a2B3c4D5e6F7g8H9i0J!@#$"
           }
         },
         "Role": {
@@ -196,7 +197,7 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionghT1mb0pHVR2yINZdCBLN5eWRDVqWY1L6AA4IUEyq5Y": {
+    "ApiLambdaVersionIZkNqrM1zuJ49gbDtI4rS4QjJNKLvok5JmXodig": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
@@ -335,7 +336,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionghT1mb0pHVR2yINZdCBLN5eWRDVqWY1L6AA4IUEyq5Y"
+        "Ref": "ApiLambdaVersionIZkNqrM1zuJ49gbDtI4rS4QjJNKLvok5JmXodig"
       },
       "Export": {
         "Name": "sls-backend-asorisa-dev-ApiLambdaFunctionQualifiedArn"

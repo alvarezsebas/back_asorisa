@@ -11,6 +11,7 @@ provider:
     TABLE_CATEGORIAS: categorias
     TABLE_CARRITO: carrito
     TABLE_COUNTERS: Counters
+    JWT_SECRET: ${env:JWT_SECRET}
   iamRoleStatements:
     - Effect: Allow
       Action:
