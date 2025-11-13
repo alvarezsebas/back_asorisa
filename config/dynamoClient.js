@@ -1,10 +1,12 @@
-import AWS from 'aws-sdk';
-import dotenv from 'dotenv';
+
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import dotenv from "dotenv";
 
 dotenv.config();
 
-AWS.config.update({
-  region: process.env.AWS_REGION,
+const client = new DynamoDBClient({
+  region: process.env.AWS_REGION || "us-east-1",
 });
 
-export const dynamoClient = new AWS.DynamoDB.DocumentClient();
+export const dynamoClient = DynamoDBDocumentClient.from(client);

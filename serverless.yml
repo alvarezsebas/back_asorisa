@@ -1,16 +1,16 @@
-service: backend-aws
+service: backend-asorisa
 frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs20.x
+  runtime: nodejs18.x
   region: us-east-1
   environment:
-    AWS_REGION: ${self:provider.region}
-    TABLE_USUARIOS: Usuarios
-    TABLE_PRODUCTOS: Productos
-    TABLE_CATEGORIAS: Categorias
-    TABLE_CARRITO: Carrito
+    TABLE_USUARIOS: usuarios
+    TABLE_PRODUCTOS: productos
+    TABLE_CATEGORIAS: categorias
+    TABLE_CARRITO: carrito
+    TABLE_COUNTERS: Counters
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -19,7 +19,7 @@ provider:
 
 functions:
   api:
-    handler: src/lambda.handler
+    handler: src/lambda.handler # Asegúrate que el archivo y export coincidan
     events:
       - httpApi:
           path: /
@@ -33,6 +33,5 @@ plugins:
 
 package:
   exclude:
-    - node_modules/**
     - .gitignore
     - .env
