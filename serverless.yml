@@ -12,6 +12,7 @@ provider:
     TABLE_CARRITO: carrito
     TABLE_COUNTERS: Counters
     JWT_SECRET: ${env:JWT_SECRET}
+    S3_BUCKET: ${env:S3_BUCKET}
   iamRoleStatements:
     - Effect: Allow
       Action:

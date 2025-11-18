@@ -14,7 +14,8 @@
         "TABLE_CATEGORIAS": "categorias",
         "TABLE_CARRITO": "carrito",
         "TABLE_COUNTERS": "Counters",
-        "JWT_SECRET": "1a2B3c4D5e6F7g8H9i0J!@#$"
+        "JWT_SECRET": "1a2B3c4D5e6F7g8H9i0J!@#$",
+        "S3_BUCKET": "asorisa-productos-2025"
       },
       "iamRoleStatements": [
         {
@@ -194,7 +195,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-asorisa/dev/1763046425272-2025-11-13T15:07:05.272Z/backend-asorisa.zip"
+                "S3Key": "serverless/backend-asorisa/dev/1763506710668-2025-11-18T22:58:30.668Z/backend-asorisa.zip"
               },
               "Handler": "src/lambda.handler",
               "Runtime": "nodejs18.x",
@@ -208,7 +209,8 @@
                   "TABLE_CATEGORIAS": "categorias",
                   "TABLE_CARRITO": "carrito",
                   "TABLE_COUNTERS": "Counters",
-                  "JWT_SECRET": "1a2B3c4D5e6F7g8H9i0J!@#$"
+                  "JWT_SECRET": "1a2B3c4D5e6F7g8H9i0J!@#$",
+                  "S3_BUCKET": "asorisa-productos-2025"
                 }
               },
               "Role": {
@@ -222,14 +224,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionIZkNqrM1zuJ49gbDtI4rS4QjJNKLvok5JmXodig": {
+          "ApiLambdaVersionwaAXI9FNctTTipByiJtwFwTPnNeqThLJQpjgN0TCk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "4ay5MP7sL1sDrOA2RZOxiNAZxJz1ija5wRl1F3gYoCQ="
+              "CodeSha256": "Ahe5jNMpLHU+0PIofVEGnhjykIKTeI2ZWbtrmu8gbkg="
             }
           },
           "HttpApi": {
@@ -358,7 +360,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionIZkNqrM1zuJ49gbDtI4rS4QjJNKLvok5JmXodig"
+              "Ref": "ApiLambdaVersionwaAXI9FNctTTipByiJtwFwTPnNeqThLJQpjgN0TCk"
             },
             "Export": {
               "Name": "sls-backend-asorisa-dev-ApiLambdaFunctionQualifiedArn"
@@ -515,7 +517,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionIZkNqrM1zuJ49gbDtI4rS4QjJNKLvok5JmXodig"
+        "versionLogicalId": "ApiLambdaVersionwaAXI9FNctTTipByiJtwFwTPnNeqThLJQpjgN0TCk"
       }
     },
     "configValidationMode": "warn",
@@ -539,7 +541,7 @@
         ],
         "artifactsS3KeyDirname": "serverless/backend-asorisa/dev/code-artifacts",
         "artifact": "/Users/sebas/Desktop/proyectos/backend-asorisa/.serverless/backend-asorisa.zip",
-        "artifactDirectoryName": "serverless/backend-asorisa/dev/1763046425272-2025-11-13T15:07:05.272Z"
+        "artifactDirectoryName": "serverless/backend-asorisa/dev/1763506710668-2025-11-18T22:58:30.668Z"
       }
     },
     "layers": {},
@@ -547,7 +549,7 @@
     "artifact": "/Users/sebas/Desktop/proyectos/backend-asorisa/.serverless/backend-asorisa.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/backend-asorisa/dev/1763046425272-2025-11-13T15:07:05.272Z",
+    "artifactDirectoryName": "serverless/backend-asorisa/dev/1763506710668-2025-11-18T22:58:30.668Z",
     "artifact": "backend-asorisa.zip"
   }
 }
